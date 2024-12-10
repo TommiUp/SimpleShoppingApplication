@@ -1,3 +1,5 @@
+Uponen Tommi
+
 A course project for Software Development Skills: Mobile 2024-25
 
 This is a simple shopping application created as part of a course project. The application allows users to:
