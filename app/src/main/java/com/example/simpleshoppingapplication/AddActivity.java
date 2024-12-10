@@ -17,7 +17,7 @@ public class AddActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        // Find Views
+        // Find views
         EditText nameEditText = findViewById(R.id.nameEditText);
         EditText descriptionEditText = findViewById(R.id.descriptionEditText);
         EditText priceEditText = findViewById(R.id.priceEditText);
@@ -44,23 +44,23 @@ public class AddActivity extends AppCompatActivity {
                     category = "hygiene";
                 }
 
-                // Check for empty fields or no selection
+                // Check for empty fields
                 if (name.isEmpty() || description.isEmpty() || price.isEmpty() || category.isEmpty()) {
                     Toast.makeText(AddActivity.this, "Please fill all fields and choose a category", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Ensure price ends with "€"
+                    // € at the end of price
                     if (!price.endsWith("€")) {
                         price += "€";
                     }
 
-                    // Pass data back to ListActivity
+                    // Pass data to ListActivity
                     Intent intent = new Intent(AddActivity.this, MainActivity.class);
                     intent.putExtra("name", name);
                     intent.putExtra("description", description);
                     intent.putExtra("price", price);
                     intent.putExtra("category", category);
 
-                    // Add item to static lists in ListActivity
+                    // Add item to lists in ListActivity
                     ListActivity.items.add(name);
                     ListActivity.descriptions.add(description);
                     ListActivity.prices.add(price);

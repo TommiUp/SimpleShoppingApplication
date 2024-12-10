@@ -15,7 +15,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Find Views
         Button addActivityBtn = findViewById(R.id.addActivityBtn);
+        Button listActivityBtn = findViewById(R.id.listActivitybtn);
+
+        // Handle Add Product Click
         addActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button listActivityBtn = findViewById(R.id.listActivitybtn);
+        // Handle Shopping List Click
         listActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
